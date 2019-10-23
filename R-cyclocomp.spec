@@ -4,7 +4,7 @@
 #
 Name     : R-cyclocomp
 Version  : 1.1.0
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/cyclocomp_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/cyclocomp_1.1.0.tar.gz
 Summary  : Cyclomatic Complexity of R Code
@@ -21,6 +21,7 @@ BuildRequires : R-desc
 BuildRequires : R-remotes
 BuildRequires : R-withr
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 # cyclocomp
@@ -40,10 +41,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570112378
+export SOURCE_DATE_EPOCH=1571814850
 
 %install
-export SOURCE_DATE_EPOCH=1570112378
+export SOURCE_DATE_EPOCH=1571814850
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
