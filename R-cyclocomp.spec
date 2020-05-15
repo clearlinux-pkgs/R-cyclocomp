@@ -4,7 +4,7 @@
 #
 Name     : R-cyclocomp
 Version  : 1.1.0
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/cyclocomp_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/cyclocomp_1.1.0.tar.gz
 Summary  : Cyclomatic Complexity of R Code
@@ -21,35 +21,30 @@ BuildRequires : R-desc
 BuildRequires : R-remotes
 BuildRequires : R-withr
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-# cyclocomp
-> Cyclomatic Complexity of R Code
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Linux Build Status](https://travis-ci.org/MangoTheCat/cyclocomp.svg?branch=master)](https://travis-ci.org/MangoTheCat/cyclocomp)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/MangoTheCat/cyclocomp?svg=true)](https://ci.appveyor.com/project/gaborcsardi/cyclocomp)
-[![](http://www.r-pkg.org/badges/version/cyclocomp)](http://www.r-pkg.org/pkg/cyclocomp)
-[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/cyclocomp)](http://www.r-pkg.org/pkg/cyclocomp)
-[![Coverage Status](https://img.shields.io/codecov/c/github/MangoTheCat/cyclocomp/master.svg)](https://codecov.io/github/MangoTheCat/cyclocomp?branch=master)
+used to indicate the complexity of a program. It is a quantitative
+    measure of the number of linearly independent paths through a program's
+    source code. It was developed by Thomas J. McCabe, Sr. in 1976.
 
 %prep
 %setup -q -c -n cyclocomp
+cd %{_builddir}/cyclocomp
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571814850
+export SOURCE_DATE_EPOCH=1589584328
 
 %install
-export SOURCE_DATE_EPOCH=1571814850
+export SOURCE_DATE_EPOCH=1589584328
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
