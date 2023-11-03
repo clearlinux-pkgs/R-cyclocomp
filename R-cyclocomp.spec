@@ -5,7 +5,7 @@
 #
 Name     : R-cyclocomp
 Version  : 1.1.1
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/cyclocomp_1.1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/cyclocomp_1.1.1.tar.gz
 Summary  : Cyclomatic Complexity of R Code
